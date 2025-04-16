@@ -1,0 +1,10 @@
+/sbanetwork.egg-info
+
+sbanetwork.egg-info
+
+/dist
+/build
+distbuild
+.env
+*.egg-info
+__pycache__/

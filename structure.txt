@@ -1,0 +1,51 @@
+sbanetwork/
+│
+├── core/
+│   ├── layers.py            # Dense, Layer, etc.
+│   ├── activations.py       # ReLU, tanH, sigmoid, etc.
+│   ├── losses.py            # All loss functions
+│   ├── optimizers.py        # SGD, Adam, etc.
+│   ├── initializers.py      # Xavier, He, etc.
+│   ├── utils.py             # Scaling, normalization, gradient clipping
+│   ├── backprop.py          # Backprop engine with memoization
+│   ├── regularization.py    # L1, L2, dropout
+│   ├── batchnorm.py         # Batch normalization
+│   ├── callbacks.py         # Early stopping, model checkpointing
+│   └── model.py             # Model class: add, compile, fit, predict, evaluate
+│
+├── experimental/            # New ideas, playgrounds
+│   ├── swarm_optimizer.py   # Experimental optimizer
+│   └── attention_layer.py   # Self-attention mechanism (experimental)
+│
+├── data/
+│   ├── split.py             # Train/test/validation split
+│   └── preprocess.py        # Normalizing/scaling, encoding
+│
+├── visualization/
+│   └── plot.py              # Accuracy/loss plots, gradient flow visualization
+│
+├── save_load/
+│   ├── save.py              # Save model, weights, and config to disk
+│   └── load.py              # Load model, weights, and config from disk
+│
+├── history/
+│   └── history.py           # Store training history, serialize history
+│
+├── tests/                   # Unit tests for each component
+│   ├── test_layers.py
+│   ├── test_losses.py
+│   ├── test_optimizers.py
+│   ├── test_model.py
+│   └── test_utils.py
+│
+├── examples/                # Notebooks / example usage
+│   ├── mnist_classification.ipynb
+│   └── binary_classification.ipynb
+│
+├── docs/                    # Documentation (Markdown or Sphinx)
+│   ├── index.md
+│   └── api_reference.md
+│
+├── __init__.py
+├── requirements.txt
+└── setup.py

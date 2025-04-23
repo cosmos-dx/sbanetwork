@@ -1,3 +1,32 @@
+"""
+backprop.py
+-----------
+
+This module defines derivatives of common loss functions and metrics used during the backward pass of training in the SBA Network (Sparse Biological-inspired Adaptive Network) library.
+
+Loss function derivatives are essential for computing gradients during backpropagation. This module supports both categorical and binary classification tasks, as well as regression loss derivatives. It also includes commonly used evaluation metrics.
+
+Functions:
+    - categorical_crossentropy_derivative(y_true, y_pred)
+    - binary_crossentropy_derivative(y_true, y_pred)
+    - mse_derivative(y_true, y_pred)
+    - mae_derivative(y_true, y_pred)
+    - accuracy_score(y_true, y_pred)
+    - binary_accuracy(y_true, y_pred)
+    - get_loss_derivative(name)
+    - get_metric(name)
+
+Notes
+-----
+Author: Abhishek Gupta  
+Library: sbanetwork  
+Email: abhishekgupta0118@gmail.com
+Github: cosmos-dx
+
+
+The `sbanetwork` library provides a biologically inspired, modular approach to building and training sparse neural networks. This `backprop.py` module enables flexible loss and metric handling, crucial for gradient-based optimization. It supports dynamic loss retrieval and evaluation during training for improved model adaptability and performance monitoring.
+"""
+
 import numpy as np
 
 def categorical_crossentropy_derivative(y_true, y_pred, epsilon=1e-8):

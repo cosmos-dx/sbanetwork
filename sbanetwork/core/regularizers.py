@@ -1,3 +1,43 @@
+# ================================================================
+# Regularizers.py
+# ================================================================
+# Author: Abhishek Gupta
+# Description:
+# This script defines various regularization techniques used in machine 
+# learning to prevent overfitting and improve the generalization of 
+# models. The regularizers included are:
+# - L1 Regularization (Lasso)
+# - L2 Regularization (Ridge)
+# - MaxNorm Regularization
+#
+# Each regularizer is implemented as a class with two primary methods:
+# - `__call__`: Computes the regularization term for the given weights.
+# - `gradient`: Computes the gradient of the regularization term with 
+#   respect to the weights, used during backpropagation.
+#
+# The MaxNorm regularizer also includes an `apply` method that applies 
+# a constraint to the weights if the L2 norm exceeds a specified maximum value.
+#
+# Regularization is applied to control model complexity and avoid overfitting 
+# by adding penalty terms to the loss function, which encourages simpler models.
+#
+# Usage:
+# You can initialize and use any of the regularizers in the `regs` 
+# dictionary by calling `get_regularizer` with the regularizer's name 
+# and any required hyperparameters.
+#
+# Example:
+# regularizer = get_regularizer('l1', lambda_=0.05)
+# penalty = regularizer(weights)
+# grad = regularizer.gradient(weights)
+#
+# Libraries used:
+# - numpy: For numerical operations such as calculating the sum and 
+#   L2 norm of weights, and computing gradients.
+#
+# ================================================================
+
+
 import numpy as np
 
 # Each regularization class implements a method to compute the regularization term and its gradient.

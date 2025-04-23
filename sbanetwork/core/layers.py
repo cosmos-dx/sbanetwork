@@ -1,3 +1,62 @@
+"""
+================================================================================
+Custom Neural Network Layers Library
+================================================================================
+
+Author: Abhishek Gupta
+Institution: NSUT Delhi
+Email: abhishekgupta0118@gmail.com
+Github: cosmos-dx
+License: MIT License
+
+Description:
+------------
+This module is a foundational library for building neural network layers 
+from scratch using NumPy. It includes a base `Layer` class and specific 
+implementations like `Dense` (fully connected layer) and `Dropout`.
+
+The design allows:
+- Clean, modular layer definitions
+- Manual weight initialization and regularization
+- Full control over the forward and backward pass
+- Integration with custom training loops
+- Educational insight into deep learning internals
+
+Supported Features:
+-------------------
+- Fully Connected Dense Layer with custom activation functions
+- Dropout regularization for training
+- Pluggable initializers and regularizers
+- Backpropagation and gradient handling
+
+This library is ideal for:
+- Educational projects and research
+- Lightweight experiments without major dependencies (e.g., TensorFlow/PyTorch)
+- Extending to convolutional or recurrent layers
+
+Modules Used:
+-------------
+- `numpy` for numerical computation
+- Custom modules:
+    - `initializers` to initialize weights
+    - `activations`  for activation functions and derivatives
+    - `regularizers`for L1, L2, or custom regularization
+
+Usage:
+------
+This module should be imported as part of a neural network framework 
+and used to compose a model by stacking layers. You can build, train, 
+and evaluate models using these core building blocks.
+
+Example:
+    dense1 = Dense(units=64, activation='relu')
+    dropout = Dropout(rate=0.5)
+    dense2 = Dense(units=10, activation='softmax')
+
+================================================================================
+"""
+
+
 import numpy as np
 from . import initializers
 from . import activations

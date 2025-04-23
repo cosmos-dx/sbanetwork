@@ -1,3 +1,56 @@
+"""
+================================================================================
+Custom Loss Functions for Neural Networks
+================================================================================
+
+Author: Abhishek Gupta
+Institution: NSUT Delhi
+Email: abhishekgupta0118@gmail.com
+Github: cosmos-dx
+License: MIT License
+
+Description:
+------------
+This module implements a variety of loss functions using NumPy. It provides a 
+base `Loss` class with several commonly used loss function subclasses for both 
+regression and classification tasks.
+
+The design allows:
+- Easy extension to custom loss functions
+- Consistent API via the `__call__()` method
+- Clean integration with neural network training loops
+
+Included Loss Functions:
+------------------------
+- Mean Squared Error (MSE) suitable for regression problems
+- Mean Absolute Error (MAE) robust alternative to MSE
+- Binary Cross-Entropy for binary classification
+- Categorical Cross-Entropy for multi-class classification (one-hot)
+- Huber Loss combines MSE and MAE to be more robust to outliers
+
+Additional Features:
+--------------------
+- `get_loss(name, **kwargs)` function to dynamically instantiate loss objects
+- Clipping is applied internally in cross-entropy losses to avoid numerical instability
+- Huber loss uses a delta parameter to adjust the threshold for squared vs. linear loss
+
+Modules Used:
+-------------
+- `numpy` for vectorized operations and numerical computation
+
+Usage:
+------
+Use the loss classes directly in training or retrieve them using `get_loss`:
+
+Example:
+    loss_fn = get_loss("mse")
+    loss_value = loss_fn(y_true, y_pred)
+
+================================================================================
+"""
+
+
+
 import numpy as np
 
 class Loss:

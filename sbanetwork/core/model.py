@@ -1,3 +1,44 @@
+# ================================================================
+# Model.py
+# ================================================================
+# Author: Abhishek Gupta
+# Email: abhishekgupta0118@gmail.com
+# Github: cosmos-dx
+# Description:
+# This script defines a custom deep learning Model class that implements 
+# the core functionality of a neural network model, including layer 
+# handling, forward and backward passes, loss computation, gradient 
+# updates, training, evaluation, and prediction. It provides methods 
+# for building, compiling, training, and evaluating models, as well as 
+# for exporting model configurations for later use.
+#
+# Key Features:
+# - Custom Layer Handling: Includes the ability to add layers such as 
+#   Dense, Dropout, and others to the model.
+# - Loss and Metrics: Allows for loss and metrics functions to be 
+#   specified and calculated during training and evaluation.
+# - Training and Gradient Descent: Implements forward and backward 
+#   passes, computes gradients, and applies them using an optimizer.
+# - Model Export: Provides functionality to export the model's layer 
+#   configuration for persistence.
+#
+# Libraries used:
+# - numpy: For numerical operations (e.g., matrix multiplication, gradient 
+#   computations).
+# - json: For exporting the model configuration to a JSON file.
+# - warnings: For issuing warnings when NaN values are detected in 
+#   predictions or gradients.
+# - optimizers: Custom implementation for various optimizers like SGD.
+# - losses: Custom loss functions used for training the model.
+# - backprop: Custom backpropagation logic to calculate gradients.
+# - callbacks: Custom callbacks for handling events like early stopping, 
+#   learning rate adjustment, etc.
+# - layers: Custom layers (e.g., Dense, Dropout) implemented for building 
+#   neural networks.
+
+# ================================================================
+
+
 import numpy as np
 import json
 import warnings

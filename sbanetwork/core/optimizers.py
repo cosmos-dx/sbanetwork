@@ -1,3 +1,46 @@
+# ================================================================
+# Optimizer.py
+# ================================================================
+# Author: Abhishek Gupta
+# Description:
+# This script defines various optimization algorithms used in training 
+# machine learning models. It includes implementations of the following 
+# optimizers:
+# - SGD (Stochastic Gradient Descent)
+# - SGDMomentum (SGD with Momentum)
+# - NAG (Nesterov Accelerated Gradient)
+# - AdaGrad (Adaptive Gradient Algorithm)
+# - RMSprop (Root Mean Square Propagation)
+# - Adam (Adaptive Moment Estimation)
+#
+# Each optimizer class inherits from a common Optimizer base class and 
+# implements an update method to adjust the model parameters using 
+# gradients computed during the backpropagation phase. The update rules 
+# vary depending on the specific optimization technique.
+#
+# Key Features:
+# - Base Optimizer Class: The base class provides a template for 
+#   different optimizers with a method for updating model parameters.
+# - Custom Optimizers: Each optimizer class implements the specific 
+#   update rule (e.g., momentum, adaptive learning rates).
+# - get_optimizer Function: This function provides a way to dynamically 
+#   retrieve an optimizer instance by its name, with configurable 
+#   hyperparameters.
+#
+# Libraries used:
+# - numpy: For numerical operations such as matrix operations and 
+#   gradient updates.
+#
+# Usage:
+# You can initialize and use any of the optimizers in the `optimizers` 
+# dictionary by calling `get_optimizer` with the optimizer's name and 
+# any required hyperparameters.
+#
+# Example:
+# optimizer = get_optimizer('adam', learning_rate=0.001, beta1=0.9, beta2=0.999)
+
+# ================================================================
+
 import numpy as np
 
 class Optimizer:

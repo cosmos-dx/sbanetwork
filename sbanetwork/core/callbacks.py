@@ -1,3 +1,34 @@
+"""
+callbacks.py
+------------
+
+This module provides a set of training callbacks for the SBA Network (Sparse Biological-inspired Adaptive Network) library.  
+Callbacks allow custom behavior to be applied during training, such as stopping early when no improvement is detected, saving the best model, or adjusting the learning rate dynamically.
+
+Classes:
+    - EarlyStopping: Stops training when the validation loss stops improving.
+    - ModelCheckpoint: Saves the model at its best performance during training.
+    - LearningRateScheduler: Adjusts the learning rate based on a user-defined schedule.
+
+Functions:
+    - get_callback(name, **kwargs): Dynamically retrieves a callback instance by name with specified parameters.
+
+Dictionary:
+    - callbacks: A registry of available callback class references for flexible instantiation.
+
+Notes
+-----
+Author: Abhishek Gupta  
+Library: sbanetwork 
+Email: abhishekgupta0118@gmail.com
+Github: cosmos-dx 
+
+The `sbanetwork` library emphasizes modular, flexible, and biologically inspired neural network construction.  
+The `callbacks.py` module offers essential training-time utilities for better control, adaptability, and efficiency during learning. It supports regression and classification use-cases and integrates seamlessly with custom training loops.
+"""
+
+
+
 import numpy as np
 import os
 import pickle

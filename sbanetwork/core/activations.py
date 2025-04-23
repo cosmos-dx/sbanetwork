@@ -1,3 +1,43 @@
+"""
+activations.py
+--------------
+
+This module contains a comprehensive collection of activation functions and their corresponding derivatives, used in the SBA Network (Sparse Biological-inspired Adaptive Network) library.
+
+Activation functions introduce non-linearity into the model, allowing the network to learn complex patterns. This module supports standard, advanced, and biologically inspired activations that can be easily selected via the `activation_functions` dictionary.
+
+Functions:
+    - relu(x), relu_derivative(x)
+    - leaky_relu(x, alpha=0.01), leaky_relu_derivative(x, alpha=0.01)
+    - elu(x, alpha=1.0), elu_derivative(x, alpha=1.0)
+    - selu(x), selu_derivative(x)
+    - swish(x), swish_derivative(x)
+    - mish(x), mish_derivative(x)
+    - sigmoid(x), sigmoid_derivative(x)
+    - tanh(x), tanh_derivative(x)
+    - linear(x), linear_derivative(x)
+    - softmax(x), softmax_derivative(x)
+    - gelu(x), gelu_derivative(x)
+    - bent_identity(x), bent_identity_derivative(x)
+    - gaussian(x), gaussian_derivative(x)
+    - softplus(x), softplus_derivative(x)
+    - custom_activation(x, alpha)
+
+Dictionary:
+    activation_functions: A dictionary mapping activation function names (str) to their (function, derivative) pairs.
+
+Notes
+-----
+Author: Abhishek Gupta  
+Library: sbanetwork  
+Email: abhishekgupta0118@gmail.com
+Github: cosmos-dx
+
+The `sbanetwork` library is designed to support the development of sparse, biologically inspired, and adaptive neural networks. It provides customizable modules for experimentation and performance-oriented research in deep learning. The `activations.py` module enables flexible use of a wide variety of activation functions that can be tailored to specific architectures and learning paradigms.
+"""
+
+
+
 import numpy as np
 
 def relu(x): return np.maximum(0, x)

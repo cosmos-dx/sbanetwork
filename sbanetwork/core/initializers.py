@@ -1,3 +1,42 @@
+"""
+initializers.py
+----------------
+
+This module provides various weight initialization strategies for use within the SBA Network (Sparse Biological-inspired Adaptive Network) library.  
+Proper weight initialization is crucial for effective learning and convergence in neural networks.
+
+Classes:
+    - Initializer: Base class for all initializers.
+    - Zeros: Initializes weights with zeros.
+    - Ones: Initializes weights with ones.
+    - RandomNormal: Initializes weights from a normal distribution.
+    - XavierUniform (aka Glorot Uniform): Suitable for sigmoid/tanh activations.
+    - XavierNormal (aka Glorot Normal): Suitable for sigmoid/tanh activations.
+    - HeUniform: Optimized for ReLU-based activations.
+    - HeNormal: Optimized for ReLU-based activations.
+    - LeCunNormal: Best for SELU and self-normalizing networks.
+    - LeCunUniform: Variant of LeCun initialization using uniform distribution.
+    - Orthogonal: Initializes weights using orthogonal matrices.
+    - LSUV: Layer-sequential unit-variance initialization (experimental).
+
+Functions:
+    - get_initializer(name, **kwargs): Returns a callable initializer object given its name and parameters.
+
+Dictionary:
+    - initializers: A registry mapping initializer names to their corresponding classes.
+
+Notes
+-----
+Author: Abhishek Gupta  
+Library: sbanetwork  
+Email: abhishekgupta0118@gmail.com
+Github: cosmos-dx
+
+This module is designed for extensibility and supports modern deep learning initialization schemes for both shallow and deep networks.
+Integrates easily with custom layer definitions and training pipelines.
+"""
+
+
 import numpy as np
 
 class Initializer:
